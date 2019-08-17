@@ -2,7 +2,7 @@
   "name": "gatsby-theme-resume",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "author": "Maxence Poutord <hello@maxpou.fr>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
@@ -20,7 +20,8 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.21"
   },
   "keywords": [
     "gatsby"
@@ -32,13 +33,14 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/maxpou/gatsby-theme-resume"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/maxpou/gatsby-theme-resume/issues"
   }
 }
