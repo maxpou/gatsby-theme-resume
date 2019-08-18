@@ -49,8 +49,8 @@ const Profile = basics => {
         </ProfileLink>
       </Content>
       {basics.profiles.map((link, i) => (
-        <Content>
-          <ProfileLink key={i} href={link.url}>
+        <Content key={i}>
+          <ProfileLink href={link.url}>
             {icons[link.network.toLowerCase()]}
             {cleanupUrl(link.url)}
           </ProfileLink>
