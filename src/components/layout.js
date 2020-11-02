@@ -8,6 +8,10 @@ const Page = styled.main`
   width: 80%;
   max-width: 770px;
   margin: 15px auto 0px auto;
+
+  @media print {
+    width: 90%;
+  }
 `
 
 const Layout = ({ children }) => {

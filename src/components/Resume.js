@@ -8,23 +8,35 @@ import Profile from "../components/Profile"
 import Skills from "../components/Skills"
 import Languages from "../components/Languages"
 import Interests from "../components/Interests"
+import FooterPrint from "../components/FooterPrint"
+import { media } from "../tokens"
 
 const Layout = styled.div`
   display: flex;
+  @media ${media.medium} {
+    display: block;
+  }
 `
 
-const LeftColumn = styled.aside`
+const LeftColumn = styled.div`
   order: 1;
   width: 30%;
 
   & > div {
     padding-right: 10px;
   }
+  @media ${media.medium} {
+    width: 100%;
+  }
 `
 
-const Main = styled.main`
+const Main = styled.div`
   order: 2;
   width: 70%;
+
+  @media ${media.medium} {
+    width: 100%;
+  }
 `
 
 const Resume = resume => (
@@ -43,6 +55,7 @@ const Resume = resume => (
         <Education education={resume.education} />
       </Main>
     </Layout>
+    <FooterPrint {...resume.basics} />
   </>
 )
 

@@ -11,6 +11,7 @@ const TimelineItem = styled.div`
   position: relative;
   width: 100%;
   padding-bottom: 15px;
+  page-break-inside: avoid;
 `
 
 const LeftPart = styled.div`
@@ -53,7 +54,7 @@ const Separator = styled.div`
   }
 `
 
-const LeftPartTitle = styled.h4`
+const LeftPartTitle = styled.p`
   margin-bottom: 3px;
 `
 
@@ -83,7 +84,7 @@ const TimeLineItemContainer = props => (
     </LeftPart>
     <Separator />
     <RightPart>
-      <RightPartTitle>{props.rightPartTitle}</RightPartTitle>
+      <RightPartTitle as={props.noTitle && 'p' }>{props.rightPartTitle}</RightPartTitle>
       {props.rightPartContent.map((content, i) => (
         <RightPartContent key={i}>{content}</RightPartContent>
       ))}
@@ -95,7 +96,7 @@ const Timeline = props => {
   return (
     <TimelineContainer>
       {props.data.map((timelineItemData, i) => (
-        <TimeLineItemContainer key={i} {...timelineItemData} />
+        <TimeLineItemContainer key={i} {...timelineItemData} noTitle={props.noTitle} />
       ))}
     </TimelineContainer>
   )

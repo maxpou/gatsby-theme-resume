@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { colors } from "../tokens"
+import QrCode from "./qrcode"
 
 const HeaderContainer = styled.header`
   vertical-align: middle;
@@ -15,14 +16,15 @@ const Name = styled.h1`
   padding-bottom: 5px;
 `
 
-const Description = styled.h2`
+const Description = styled.p`
   font-size: 1.1em;
 `
 
 const Header = props => (
   <HeaderContainer>
     <Name>{props.basics.name}</Name>
-    <Description>{props.basics.about}</Description>
+    <Description>{props.basics.title}</Description>
+    <QrCode url={props.basics.cvUrl} />
   </HeaderContainer>
 )
 

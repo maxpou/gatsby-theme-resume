@@ -34,8 +34,10 @@ const useSiteResume = () => {
               nationality
               age
               phone
-              about
+              title
               website
+              cvUrl
+              lastUpdate
               profiles {
                 network
                 url

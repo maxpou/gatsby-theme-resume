@@ -1,5 +1,5 @@
 export default {
-  small: "(min-width: 480px)",
-  medium: "(min-width: 700px)",
-  large: "(min-width: 960px)",
+  small: "screen and (max-width: 480px)",
+  medium: "screen and (max-width: 768px)",
+  large: "screen and (max-width: 960px)",
 }

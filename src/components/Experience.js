@@ -14,10 +14,10 @@ const formatProps = props => {
 const Experience = props => {
   const formatedData = formatProps(props.experiences)
   return (
-    <div>
+    <section>
       <SectionTitle>Experience</SectionTitle>
       <Timeline data={formatedData} />
-    </div>
+    </section>
   )
 }
 

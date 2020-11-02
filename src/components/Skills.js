@@ -9,17 +9,20 @@ const Category = styled.p`
   }
 `
 
-const Content = styled.p`
+const Content = styled.li`
   padding-left: 10px;
+  list-style: none;
 `
 
 const Skill = skill => {
   return (
     <>
       <Category>{skill.category}</Category>
-      {skill.content.map((content, i) => (
-        <Content key={i}>{content}</Content>
-      ))}
+      <ul>
+        {skill.content.map((content, i) => (
+          <Content key={i}>{content}</Content>
+        ))}
+      </ul>
     </>
   )
 }

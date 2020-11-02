@@ -27,8 +27,7 @@ const Highlight = styled.li`
 `
 
 const ProjectUrl = styled(Link)`
-  float: right;
-  color: ${colors.textLight};
+  color: ${colors.link};
   font-weight: normal;
 `
 
@@ -37,10 +36,11 @@ const Project = project => {
     <>
       <Category>
         {project.name}
-        {project.description && (
-          <Description> | {project.description}</Description>
-        )}
-        <ProjectUrl>{cleanupUrl(project.url)}</ProjectUrl>
+        <Description>
+          {" "}
+          · {project.description} (see{" "}
+          <ProjectUrl href={project.url}>{cleanupUrl(project.url)}</ProjectUrl>)
+        </Description>
       </Category>
       <Highlights>
         {project.highlights.map((highlight, i) => (
@@ -54,7 +54,7 @@ const Project = project => {
 const Projects = props => {
   return (
     <SectionCategory>
-      <SectionTitle>Selected Projects</SectionTitle>
+      <SectionTitle>Highlights</SectionTitle>
       <div>
         {props.projects.map((project, i) => (
           <Project key={i} {...project} />

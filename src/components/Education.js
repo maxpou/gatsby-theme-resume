@@ -9,10 +9,11 @@ const formatProps = props => {
     leftPartContent: [prop.school, prop.location],
     rightPartTitle: prop.degree,
     rightPartContent: prop.detail ? prop.detail : [],
+    noTitle: true,
   }))
 }
 
-const EducationContainer = styled.div`
+const EducationContainer = styled.section`
   & h3 {
     font-size: 1em;
   }

@@ -14,6 +14,23 @@ body {
   color: ${colors.text};
   background-color: ${colors.background};
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 17mm 10mm 17mm;
+  }
+  html, body {
+    width: 210mm;
+    height: 282mm;
+    font-size: 14px;
+    background: #FFF;
+    overflow: visible;
+  }
+  body {
+    padding-top: 0mm;
+  }
+}
 `
 
 export const SectionTitle = styled.h2`
@@ -31,20 +48,19 @@ export const SectionTitle = styled.h2`
   }
 `
 
-export const SectionCategory = styled.div`
+export const SectionCategory = styled.section`
   margin-bottom: 20px;
   page-break-inside: avoid;
 `
 
 export const Link = styled.a`
   color: ${colors.text};
-  /* border-bottom: 1px solid ${colors.primary}; */
   text-decoration: none;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: ${colors.primary};
+    border-bottom: 1px solid ${colors.link};
     color: ${colors.textLight};
   }
 `
