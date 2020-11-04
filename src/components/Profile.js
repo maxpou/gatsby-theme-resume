@@ -17,8 +17,10 @@ const ProfileLink = styled(Link)`
     margin-right: 3px;
   }
 `
+const ageShown = (age) => `${age} years old`
 
-const ageShown = age => `${age} years old`
+const formatPhone = (phone) =>
+  phone.replace(/(\d{3})(\d{2})(\d{3})(\d{4})/, "$1 $2 $3 $4")
 
 const icons = {
   email: <EmailIcon />,
@@ -28,13 +30,18 @@ const icons = {
   web: <WebIcon />,
 }
 
-const Profile = basics => {
+const Profile = (basics) => {
   return (
     <SectionCategory>
       <SectionTitle>About</SectionTitle>
       <Content>
         {basics.nationality},&nbsp;
         {basics.age && ageShown(basics.age)}
+      </Content>
+      <Content>
+        <ProfileLink href={`tel:${basics.phone}`}>
+          {formatPhone(basics.phone)}
+        </ProfileLink>
       </Content>
       <Content>
         <ProfileLink href={`mailto:${basics.email}`}>

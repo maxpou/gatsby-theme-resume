@@ -31,7 +31,7 @@ const ProjectUrl = styled(Link)`
   font-weight: normal;
 `
 
-const Project = project => {
+const Project = (project) => {
   return (
     <>
       <Category>
@@ -51,7 +51,7 @@ const Project = project => {
   )
 }
 
-const Projects = props => {
+const Projects = (props) => {
   return (
     <SectionCategory>
       <SectionTitle>Highlights</SectionTitle>

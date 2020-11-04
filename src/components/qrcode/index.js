@@ -22,8 +22,10 @@ const Description = styled.span`
   display: block;
   font-size: 0.8em;
   margin-top: -10px;
+  padding-left: 5px;
   color: ${colors.textLight};
 `
+
 
 const QrCode = ({ url }) => {
   return (

@@ -13,7 +13,7 @@ const Content = styled.p`
   padding-left: 10px;
 `
 
-const Level = level => {
+const Level = (level) => {
   return (
     <>
       <Category>{level.level}</Category>
@@ -24,7 +24,7 @@ const Level = level => {
   )
 }
 
-const Languages = props => {
+const Languages = (props) => {
   return (
     <SectionCategory>
       <SectionTitle>Languages</SectionTitle>

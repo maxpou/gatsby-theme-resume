@@ -7,9 +7,15 @@ module.exports = {
     age: "31",
     website: "https://www.maxpou.fr",
     cvUrl: "https://www.maxpou.fr/cv",
-    phone: "",
+    phone: "+353838667354",
     location: "",
-    lastUpdate: "November 2020",
+    description: `
+      I'm Maxence, a French Software Engineer with 10 years of experience developing web-based applications. 
+      I am a dedicated, hardworking, ambitious person that gets things done, both on my own initiative and within a team. 
+      I enjoy challenges and I am not afraid of getting my hands dirty.
+      Because knowledge sharing really matters to me, I spend a non-negligible part of my time sharing my knowledge through blog posts, mentoring sessions or conferences.
+    `,
+    lastUpdate: "4 November 2020",
     profiles: [
       {
         network: "Twitter",
@@ -56,7 +62,7 @@ module.exports = {
       description: "at technical conferences",
       url: "https://www.maxpou.fr/speaking",
       highlights: [
-        "Conference topic: JavaScript, Testing, PWA and Software quality",
+        "Speak: JavaScript, Testing, PWA and Software quality",
         "Workshops/Training: Vue.js and PHP",
       ],
     },
@@ -90,7 +96,7 @@ module.exports = {
     {
       company: "Hostelworld",
       position: "Software Engineer",
-      period: "Nov 2016 - Apr 2018",
+      period: "November 2016 - April 2018",
       location: "Dublin, Ireland",
       activities: [
         "Architecture definition, development and maintenance of the main website (back+front)",
@@ -101,7 +107,7 @@ module.exports = {
     {
       company: "Conserto",
       position: "Consultant",
-      period: "May 2015 - Apr 2016",
+      period: "May 2015 - April 2016",
       location: "Nantes, France",
       activities: [
         "Architecture definition, development and maintenance of various web applications",
@@ -112,7 +118,7 @@ module.exports = {
     {
       company: "Energy Formation (ENGIE Group)",
       position: "Web Developer/Project Manager",
-      period: "Oct 2011 - Jan 2015",
+      period: "October 2011 - January 2015",
       location: "Nantes, France",
       activities: [
         "Creation of a web application based on the Symfony Framework (expose/consume API)",

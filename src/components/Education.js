@@ -3,8 +3,8 @@ import styled from "styled-components"
 import Timeline from "./Timeline"
 import { SectionTitle } from "./Common"
 
-const formatProps = props => {
-  return props.map(prop => ({
+const formatProps = (props) => {
+  return props.map((prop) => ({
     leftPartTitle: prop.period,
     leftPartContent: [prop.school, prop.location],
     rightPartTitle: prop.degree,
@@ -23,12 +23,12 @@ const EducationContainer = styled.section`
   }
 `
 
-const Education = props => {
+const Education = (props) => {
   const formatedData = formatProps(props.education)
   return (
     <EducationContainer>
       <SectionTitle>Education</SectionTitle>
-      <Timeline data={formatedData} />
+      <Timeline noTitle data={formatedData} />
     </EducationContainer>
   )
 }

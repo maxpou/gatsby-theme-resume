@@ -53,13 +53,14 @@ export const SectionCategory = styled.section`
   page-break-inside: avoid;
 `
 
-export const Link = styled.a`
+export const Link = styled.a.attrs((props) => ({
+  target: "_blank",
+  rel: "noopener noreferrer",
+}))`
   color: ${colors.text};
   text-decoration: none;
-  cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-bottom: 1px solid ${colors.link};
     color: ${colors.textLight};
   }

@@ -14,8 +14,10 @@ const FooterPrintWrapper = styled.div`
   }
 `
 
-const FooterPrint = ({name, cvUrl, lastUpdate}) => (
-  <FooterPrintWrapper>{name} - {cleanupUrl(cvUrl)} - last update {lastUpdate}</FooterPrintWrapper>
+const FooterPrint = ({ name, cvUrl, lastUpdate }) => (
+  <FooterPrintWrapper>
+    {name} - {cleanupUrl(cvUrl)} - last update {lastUpdate}
+  </FooterPrintWrapper>
 )
 
 export default FooterPrint

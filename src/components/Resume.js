@@ -13,6 +13,7 @@ import { media } from "../tokens"
 
 const Layout = styled.div`
   display: flex;
+  width: 100%;
   @media ${media.medium} {
     display: block;
   }
@@ -39,9 +40,15 @@ const Main = styled.div`
   }
 `
 
-const Resume = resume => (
+const Description = styled.div`
+  margin-bottom: 15px;
+  line-height: 1.5;
+`
+
+const Resume = (resume) => (
   <>
     <Header basics={resume.basics} />
+    <Description>{resume.basics.description}</Description>
     <Layout>
       <LeftColumn>
         <Profile {...resume.basics} />

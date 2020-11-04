@@ -38,6 +38,7 @@ const useSiteResume = () => {
               website
               cvUrl
               lastUpdate
+              description
               profiles {
                 network
                 url

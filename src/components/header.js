@@ -20,7 +20,7 @@ const Description = styled.p`
   font-size: 1.1em;
 `
 
-const Header = props => (
+const Header = (props) => (
   <HeaderContainer>
     <Name>{props.basics.name}</Name>
     <Description>{props.basics.title}</Description>

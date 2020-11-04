@@ -1,13 +1,18 @@
 import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
-import { GlobalStyle } from "../components/Common"
 import styled from "styled-components"
+import { GlobalStyle } from "../components/Common"
+import { media } from "../tokens"
 
 const Page = styled.main`
   width: 80%;
   max-width: 770px;
   margin: 15px auto 0px auto;
+
+  @media ${media.medium} {
+    width: 90%;
+  }
 
   @media print {
     width: 90%;

@@ -4,7 +4,7 @@ import { SectionCategory, SectionTitle } from "./Common"
 
 const Content = styled.p``
 
-const Interests = props => {
+const Interests = (props) => {
   return (
     <SectionCategory>
       <SectionTitle>Interests</SectionTitle>

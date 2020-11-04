@@ -14,7 +14,7 @@ const Content = styled.li`
   list-style: none;
 `
 
-const Skill = skill => {
+const Skill = (skill) => {
   return (
     <>
       <Category>{skill.category}</Category>
@@ -27,7 +27,7 @@ const Skill = skill => {
   )
 }
 
-const Skills = props => {
+const Skills = (props) => {
   return (
     <SectionCategory>
       <SectionTitle>Skills</SectionTitle>
